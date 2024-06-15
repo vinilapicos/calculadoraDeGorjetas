@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="Vinicius Carvalho">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Calculadora de Gorjeta</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <h3 style="text-align: center; font-weight: bold;">Calculadora de Gorjeta</h3>
+            <p style="border-bottom: 2px solid rgba(211, 211, 211, 0.5);"></p>
+            <br>
+            <label for="quantidade">Montante</label>
+            <br>
+            <button><i class="fa-solid fa-brazilian-real-sign"></i></button><input id="quantidade"type="number">
+            <br>
+            <br>
+            <label for="convidados">Número de Convidados</label>
+            <br>
+            <button><i class="fa-solid fa-person"></i></button><input id="convidados" type="number">
+            <br>
+            <br>
+            <label for="qualidade">Qualidade do Serviço</label>
+            <br>
+            <select id="qualidade">
+                <option disabled selected value="0">Escolha...</option>
+                <option value="0.3">30% - Fora do Comum</option>
+                <option value="0.2">20% - Bom</option>
+                <option value="0.15">15% - Ok</option>
+                <option value="0.1">10% - Ruim</option>
+                <option value="0.05">5% - Terrível</option>
+            </select>
+            <div style="text-align: center;">
+                <p style="border-top: 2px solid rgba(211, 211, 211, 0.5);"></p>
+                <button onclick="calcular()" style="border-radius: 5px; width: fit-content;">Calcular</button>
+            </div>
+        </div>
+        <div id="totalGorjeta"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
